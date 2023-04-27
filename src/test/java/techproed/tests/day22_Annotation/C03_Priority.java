@@ -6,6 +6,7 @@ import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
+import org.testng.annotations.Ignore;
 import org.testng.annotations.Test;
     public class C03_Priority {
         /*
@@ -20,19 +21,38 @@ import org.testng.annotations.Test;
         public void techproedTest() {
             driver.get("https://techproeducation.com");
         }
+
         @Test(priority = -1)
         public void amazonTest() {
             driver.get("https://amazon.com");
         }
+
+
+
         @Test(priority = -2)
         public void facebookTest() {
             driver.get("https://facebook.com");
         }
+
+
+        @Ignore
+        @Test
+        public void test1() {
+            System.out.println("test1 method");
+        }
+
+        @Test(enabled = false)
+        public void test2() {
+            System.out.println("test2 method");
+        }
+
+
         @BeforeMethod
         public void setUp() {
             WebDriverManager.chromedriver().setup();
             driver = new ChromeDriver(new ChromeOptions().addArguments("--remote-allow-origins=*"));
         }
+
         @AfterMethod
         public void tearDown() {
             driver.close();
