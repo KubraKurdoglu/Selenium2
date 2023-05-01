@@ -1,4 +1,4 @@
-package techproed.tests.day23_DependsOnMethods;
+package techproed.tests.day23_DependsOnMethods_SoftAssertion;
 
 import org.openqa.selenium.By;
 import org.testng.annotations.Test;

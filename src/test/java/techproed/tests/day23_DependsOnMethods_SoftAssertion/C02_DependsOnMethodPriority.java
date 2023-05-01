@@ -1,4 +1,4 @@
-package techproed.tests.day23_DependsOnMethods;
+package techproed.tests.day23_DependsOnMethods_SoftAssertion;
 
 import io.github.bonigarcia.wdm.WebDriverManager;
 import org.openqa.selenium.By;
@@ -10,21 +10,11 @@ import org.testng.annotations.Test;
 
 import java.time.Duration;
 
-public class C01_DependsOnMethods {
+public class C02_DependsOnMethodPriority {
+
     /*
-Test methodlari birbirinden bagimsiz calisir, Methodlari birbirine bagimli calistirmak istersek
-"dependsOnMethods"parametresini @Test notasyonundan sonra baglamak istedigimiz test method'unun
-adini belirtiriz.
-
-
-/*
-        TestNG test method'larını isim sırasına (alfabetik) göre ve rakamlara göre küçükten büyüğe çaliştirir.
-    Eğer isim sıralamasının dışında bir sıralama ile çalışmasını isterseniz o zaman test methodlarına öncelik(priority)
-    tanımlayabiliriz.
-        Priority küçükten büyüğe göre çalışır. Eğer bir test methoduna priority atanmamışsa
-    default olarak priority=0 kabul edilir.
+    Bu class'ı dependsOnMethods ve priority arasındaki farkı göstermek için açtık
      */
-
     WebDriver driver;
     @Test
     public void amazonTest(){
@@ -35,12 +25,12 @@ adini belirtiriz.
     }
 
 
-    @Test (dependsOnMethods = "amazonTest")
+    @Test (priority = 1)
     public void amazonTest2(){
         driver.get("https://amazon.com");// yukardaki dependsOnMethod olmasa ==>BullPointerException verirdi
     }
 
-    @Test(dependsOnMethods = "amazontest2")
+    @Test(priority = 2)
     public void amazonTest3() {
         driver.findElement(By.id("twotabsearchtextbox")).sendKeys("iphone", Keys.ENTER);
     }
