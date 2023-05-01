@@ -1,0 +1,28 @@
+1-Amaç(Utilities Class);
+sürdürülebilir (maintainable), yeniden kullanılabilir (reusable),
+daha hızlı (faster), anlaşılabilir (understandable) bir framework
+dizayn etmek
+
+
+2-TestNG'de PageObjectModel kullaniliyor
+
+----------DATA PROVIDER--------------
+
+3-DATA PROVIDER==>Birden fazla veriyi test etmek istediginde, daha onceden yaptigin gibi list icine atip donguye atmana
+ gerek kalmiyor. Data provider ile verileri iki boyutlu bir Array'in icine koyuyorsun, her data icin  bir
+ test methodu kullaniyor gibi bu verileri test ediyor.
+
+4-DATA PROVIDER==> da bir ozellik var, Array'e koydugun herseyi ayri ayri calistiriyor.
+
+5-Test Methodunda bilgiler(email, password vs.) gozukmesin istiyorsak, ConfigReader ve Excel'den de cekebiliriz verileri.
+
+6-@Dataprovider(name= testAdi) ==> boyle bir kullanim gorursen, bu su durumda oluyor. Iki test methodu varsa
+dataProvider'i ozellestirmis oluyoruz
+
+
+7-BOP MANTIGI==> BOP (Business Oriented Programming), BOP, işletmelerin iş gereksinimlerine dayalı yazılım geliştirme yöntemidir.
+TestNG'nin BOP mantığı, yazılım testleri yaparken iş gereksinimlerinin doğrudan test senaryolarına yansıtılmasını sağlar.
+Bu şekilde, yazılımın iş gereksinimlerine uygun olup olmadığı doğrudan test edilebilir.
+TestNG, iş gereksinimlerine dayalı test senaryoları oluşturmak için kolayca yapılandırılabilen bir test çerçevesi sağlar.
+ Bu da yazılım testlerinin daha etkili ve doğru olmasına yardımcı olur.
+
