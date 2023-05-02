@@ -40,8 +40,11 @@ adini belirtiriz.
         driver.get("https://amazon.com");// yukardaki dependsOnMethod olmasa ==>BullPointerException verirdi
     }
 
+    /*
     @Test(dependsOnMethods = "amazontest2")
     public void amazonTest3() {
         driver.findElement(By.id("twotabsearchtextbox")).sendKeys("iphone", Keys.ENTER);
     }
+
+     */
 }

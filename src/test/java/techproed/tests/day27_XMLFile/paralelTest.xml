@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="All Test Suite" parallel="methods" thread-count="2">
+    <test
+          name="/Users/kubra/IdeaProjects/B129SeleniumTestNG/src/test/java/techproed/tests/day23_DependsOnMethods_SoftAssertion">
+        <classes>
+            <class name="techproed.tests.day23_DependsOnMethods_SoftAssertion.C01_DependsOnMethods">
+                <methods>
+                    <include name="amazonTest"/>
+                    <include name="amazonTest2"/>
+                    <include name="amazonTest3"/>
+                </methods>
+            </class>
+            <class name="techproed.tests.day23_DependsOnMethods_SoftAssertion.C02_DependsOnMethodPriority">
+                <methods>
+                    <include name="amazonTest"/>
+                    <include name="amazonTest2"/>
+                    <include name="amazonTest3"/>
+                </methods>
+            </class>
+            <class name="techproed.tests.day23_DependsOnMethods_SoftAssertion.C03_SoftAssertion">
+                <methods>
+                    <include name="amazonTest"/>
+                </methods>
+            </class>
+            <class name="techproed.tests.day23_DependsOnMethods_SoftAssertion.C04_DriverTest">
+                <methods>
+                    <include name="driverTest1"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+</suite>

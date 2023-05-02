@@ -18,7 +18,7 @@ public class PositiveTest {
          */
 
 
-    @Test
+    @Test(groups = "smoke")
     public void test1() {
 
         Driver.getDriver().get(ConfigReader.getProperty("blueRentACarUrl"));

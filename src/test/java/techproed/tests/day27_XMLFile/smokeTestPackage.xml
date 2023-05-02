@@ -12,3 +12,8 @@
         <!-- .xml file da ilk tag <suite> sonra <test> olarak devam eder-->
         <!-- .xml file ile bu class'ta sadece package olarak test yapacağımız için <classes> tag'lerine gerek yoktur-->
         <!--yukardaki path kopyalama kismindan sonra / salash'lari nokta yaotik -->
+        <!-- Sag tik yaptigimiz zaman run sekmesi gozukmuyorsa file-> save-all (ctrl+s) yapmamiz gerekir -->
+        <!-- Testlerimizi xml file ile çalıştırmanın
+                1. mantığı İsteğim classları tek seferde ve tek bir suite altında çalıştırabilmek
+                2. mantığı isteğim package yada methodları tek sefer ve tek bir suite altında çalıştırabilmek
+                -->

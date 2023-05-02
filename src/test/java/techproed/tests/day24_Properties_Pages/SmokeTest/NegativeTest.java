@@ -24,7 +24,7 @@ public class NegativeTest {
         User with email fake@bluerentalcars.com not found
      */
 
-    @Test
+    @Test(groups = "smoke")
     public void test1() throws InterruptedException {
 
         Driver.getDriver().get(ConfigReader.getProperty("blueRentACarUrl"));
