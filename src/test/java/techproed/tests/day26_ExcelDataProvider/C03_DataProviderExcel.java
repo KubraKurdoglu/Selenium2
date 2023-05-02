@@ -25,4 +25,10 @@ public class C03_DataProviderExcel {
         ReusableMethods.bekle(3);
         Driver.closeDriver();
     }
+
+    /*
+    TESTLERİMİZ: TEST PACKAGE ALTINDA
+    LOCATELERİMİZ:PAGES PACKAGE ALTINDA
+    AYARLAMALARI YAPTIĞIMIZ VE METHODLAR OLUŞTURDUĞUMUZ CLASSLAR UTILITIES ALTINDA
+     */
 }

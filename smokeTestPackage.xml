@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Day 24 Smoke Test">
+    <test name="BlueRentalCar Smoke Test">
+        <packages>
+            <package name="techproed.tests.day24_Properties_Pages.SmokeTest"></package>
+            
+        </packages>
+    </test>
+</suite>
+        <!--.xml file actiktan sonra ctrl+alt+L  tuslarina basarak .xml file'daki kodlari duzene koyariz -->
+        <!-- .xml file da ilk tag <suite> sonra <test> olarak devam eder-->
+        <!-- .xml file ile bu class'ta sadece package olarak test yapacağımız için <classes> tag'lerine gerek yoktur-->
+        <!--yukardaki path kopyalama kismindan sonra / salash'lari nokta yaotik -->

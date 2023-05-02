@@ -20,9 +20,27 @@ dizayn etmek
 dataProvider'i ozellestirmis oluyoruz
 
 
-7-BOP MANTIGI==> BOP (Business Oriented Programming), BOP, işletmelerin iş gereksinimlerine dayalı yazılım geliştirme yöntemidir.
+7- POM=> Page Object Model, Bu TestNG'nin mantiginda olan husus.
+
+
+8-BOP MANTIGI==> BOP (Business Oriented Programming), BOP, işletmelerin iş gereksinimlerine dayalı yazılım geliştirme yöntemidir.
 TestNG'nin BOP mantığı, yazılım testleri yaparken iş gereksinimlerinin doğrudan test senaryolarına yansıtılmasını sağlar.
 Bu şekilde, yazılımın iş gereksinimlerine uygun olup olmadığı doğrudan test edilebilir.
 TestNG, iş gereksinimlerine dayalı test senaryoları oluşturmak için kolayca yapılandırılabilen bir test çerçevesi sağlar.
  Bu da yazılım testlerinin daha etkili ve doğru olmasına yardımcı olur.
 
+
+ 9-/*
+       TESTLERİMİZ: TEST PACKAGE ALTINDA
+       LOCATELERİMİZ:PAGES PACKAGE ALTINDA
+       UTILITIES: AYARLAMALARI YAPTIĞIMIZ VE METHODLAR OLUŞTURDUĞUMUZ CLASSLAR UTILITIES ALTINDA
+        */
+
+10-----------XML FILE
+xml file da istedigin package, method ve testi calistirabiliyorsun.
+/*
+Testng.xml dosyasini indirmek icin plugins install ok. Smoke test sag tikla
+createTesngXml tikla ok .File, reloadAll from disk tikla.Dosya projede olusur.
+ */
+
+ 11-<!--.xml file actiktan sonra ctrl+alt+L  tuslarina basarak .xml file'daki kodlari duzene koyariz -->

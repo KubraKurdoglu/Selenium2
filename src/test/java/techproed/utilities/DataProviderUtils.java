@@ -16,6 +16,6 @@ public class DataProviderUtils {
     @DataProvider
     public Object[][] blueRental() {
         ExcelUtils excelUtils = new ExcelUtils("src/test/java/resources/mysmoketestdata.xlsx", "customer_info");
-        return excelUtils.getDataArray();
+        return excelUtils.getDataArray();//buradki getDataAarray() methodunu ExcelItils class inda olusturdu
     }
 }

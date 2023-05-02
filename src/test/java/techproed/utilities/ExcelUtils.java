@@ -6,9 +6,15 @@ import org.apache.poi.ss.usermodel.Workbook;
 import org.apache.poi.ss.usermodel.WorkbookFactory;
 
 import java.io.FileInputStream;
+import java.io.FileOutputStream;
 import java.io.IOException;
+import java.util.ArrayList;
+import java.util.List;
 
 public class ExcelUtils {
+
+    //Bu JUnit'teki TestBase class inin modofiye edilmis hali
+
     //asagidaki degiskenleri ilk basta "private" yapmamisti sonradan degistirmeye karar verdi
    private Workbook workbook;
    private Sheet sheet;
@@ -67,6 +73,31 @@ public class ExcelUtils {
             }
         }
         return data;
+    }
+
+    //==============Sutun isimlerini verir==================//
+    public List<String> getColumnsNames() {
+        List<String> columns = new ArrayList<>();
+        for (Cell cell : sheet.getRow(0)) {
+            columns.add(cell.toString());
+        }
+        return columns;
+    }
+    //=========Deger, Satir, Sutun girindiginde, O satır ve sutuna girilen veriyi ekler===============//
+    public void setCellData(String value, int rowNum, int colNum) {
+        try {
+            sheet.getRow(rowNum).createCell(colNum).setCellValue(value);
+            FileOutputStream fos = new FileOutputStream(path);
+            workbook.write(fos);
+            fos.close();
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+    }
+    //    Bu metot ustdeki metotla birlikde calisir. Overload eder. Parametreleri farklidir
+    public void setCellData(String value, String columnName, int row) {
+        int column = getColumnsNames().indexOf(columnName);
+        setCellData(value, row, column);
     }
 
 
