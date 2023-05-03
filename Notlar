@@ -23,6 +23,12 @@ dataProvider'i ozellestirmis oluyoruz
 7- POM=> Page Object Model, Bu TestNG'nin mantiginda olan husus.
 
 
+8-<!-- Testlerimizi xml file ile çalıştırmanın
+                     1. mantığı İsteğim classları tek seferde ve tek bir suite altında çalıştırabilmek
+                     2. mantığı isteğim package yada methodları tek sefer ve tek bir suite altında çalıştırabilmek
+                     3. Farklı classlar içindeki farklı methodları tek sefer ve tek bir suite altında çalıştırabilmek
+                     4. Grup isimleri atadığımız methodları tek sefer ve tek bir suite altında çalıştırabilmek-->
+
  9-/*
        TESTLERİMİZ: TEST PACKAGE ALTINDA
        LOCATELERİMİZ:PAGES PACKAGE ALTINDA
@@ -66,6 +72,20 @@ createTesngXml tikla ok .File, reloadAll from disk tikla.Dosya projede olusur.
            class -> Her bir işlem için bir class ile run eder. Çalıştığı class'ta işlem bitince sıradaki class'a geçer
            method -> Her bir işlem için bir method ile run eder.
            tests -> Her bir işlem için bir tes ile run eder-->
+
+
 14--thread-count = 2 neydi==>.xml file testlere baslarken kac tane browser acsin istersek, o sayiyi
 yaziyoruz.
 
+15--//Bu bir örnektir
+    @FindBy(xpath = "//*[text()='OK']")//-> Linklerin listesinin locati
+    public List<WebElement> listler;
+    //Normalde Webelementleri locate için findelements kullanıyorduk
+    //TestNG de page class'ında bunun kullanımı yukarıdaki örnekteki gibidir
+
+16- TestNG ile beraber testleri siraya sokabiliyoruz. bunu da "Priortiy" ile yapiyoruz. fakat JUnit'te bunu
+yapamiyorduk. JUnit'te alfabetik calisir.
+
+
+17--SOFTASSERTION kullanabilmen icin once obje olustirman gerekiyor, cunku "sofassertion" static degil, instance'dir.
+onun methodlarina objesiz ulasamazsin
