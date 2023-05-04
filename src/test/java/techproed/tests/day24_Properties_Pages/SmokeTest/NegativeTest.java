@@ -43,7 +43,7 @@ public class NegativeTest {
 
         //Hoca testbase'i kopyaladiktan sonra, adini ReusableMethods koydu, ve o class'taki methodlari kullandi
         ReusableMethods.bekle(3);
-        ReusableMethods.tumSayfaResmi();
+        ReusableMethods.tumSayfaResmi("TumSayfaResmi");
 
         //Hatta burda, "tumSayfaResmi" methodunu kullaninca, otomatik TestOutput dosyasi olusturdu.
         //cunku o methodda dosya yolu vardi, methodu calistrinca dosyayi otomatik olusturdu

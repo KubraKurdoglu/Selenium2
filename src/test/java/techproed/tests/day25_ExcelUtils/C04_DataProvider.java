@@ -52,7 +52,7 @@ public class C04_DataProvider {
 
 
         //Her aratmadan sonra sayfa resmi alınız
-        ReusableMethods.tumSayfaResmi();
+        ReusableMethods.tumSayfaResmi("TumsayfaResmi");
         ReusableMethods.bekle(2);
         Driver.closeDriver();
     }
