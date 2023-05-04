@@ -1,6 +1,5 @@
 package techproed.tests.day01_Practice;
 
-import org.openqa.selenium.WebElement;
 import org.testng.annotations.Test;
 import techproed.pages.FacebookPage;
 import techproed.utilities.ConfigReader;

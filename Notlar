@@ -89,3 +89,15 @@ yapamiyorduk. JUnit'te alfabetik calisir.
 
 17--SOFTASSERTION kullanabilmen icin once obje olustirman gerekiyor, cunku "sofassertion" static degil, instance'dir.
 onun methodlarina objesiz ulasamazsin
+
+
+18-TestNG listener, TestNG test sürecinde belirli olayları izleyen ve bu olaylara yanıt veren özelleştirilebilir bir yapıdır. Bir TestNG listener'ı kullanarak, testlerin başlangıcını, bitişini, hatalarını ve başarılarını, gruplarını, parametrelerini ve daha birçok şeyi takip edebilir ve raporlayabilirsiniz.
+   Birkaç örnek:
+   IAnnotationTransformer: Bu listener, test sınıflarını, test metodlarını veya testNG parametrelerini değiştirmenize
+   olanak tanır. Örneğin, test sınıflarını dinamik olarak atamak isteyebilirsiniz veya tüm testlerinize önceden
+   tanımlanmış bir parametre ekleyebilirsiniz.
+   ITestListener: Bu listener, testlerin başlatılması, başarılı veya başarısız olması ve bitirilmesi gibi ana
+   olayları izler. Örneğin, bir test başarısız olduğunda bildirim almak için kullanabilirsiniz veya testlerin başlama
+   ve bitiş zamanlarını kaydedebilirsiniz.
+   ISuiteListener: Bu listener, test paketlerinin başlatılması ve bitirilmesi gibi süreç seviyesindeki
+    olayları izler. Örneğin, tüm test paketleri başarıyla tamamlandığında bir bildirim almak için kullanabilirsiniz.

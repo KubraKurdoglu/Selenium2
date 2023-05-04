@@ -1,6 +1,8 @@
 package techproed.utilities;
 
+import com.github.javafaker.Faker;
 import org.testng.annotations.DataProvider;
+import techproed.pages.HerokuPage;
 
 public class DataProviderUtils {
     @DataProvider
@@ -18,4 +20,6 @@ public class DataProviderUtils {
         ExcelUtils excelUtils = new ExcelUtils("src/test/java/resources/mysmoketestdata.xlsx", "customer_info");
         return excelUtils.getDataArray();//buradki getDataAarray() methodunu ExcelItils class inda olusturdu
     }
+
+
 }

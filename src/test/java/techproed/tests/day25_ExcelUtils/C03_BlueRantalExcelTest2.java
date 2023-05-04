@@ -8,8 +8,6 @@ import techproed.utilities.Driver;
 import techproed.utilities.ExcelUtils;
 import techproed.utilities.ReusableMethods;
 
-import java.security.Key;
-
 public class C03_BlueRantalExcelTest2 {
     /*
         EXCEL dosyasindaki tum email ve passwordler ile
