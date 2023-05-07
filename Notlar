@@ -101,3 +101,15 @@ onun methodlarina objesiz ulasamazsin
    ve bitiş zamanlarını kaydedebilirsiniz.
    ISuiteListener: Bu listener, test paketlerinin başlatılması ve bitirilmesi gibi süreç seviyesindeki
     olayları izler. Örneğin, tüm test paketleri başarıyla tamamlandığında bir bildirim almak için kullanabilirsiniz.
+
+    19-day 29 <!-- Listeners'i .xml file ile farklı method ve classlar için kullanmak istersek
+       suite tag'indan sonra listeners tag'i sonrasında listener tag'i ile utilities altında oluşturduğumuz Listeners class'inin
+       yolunu belirtiriz. Böylece Test class'ımızda listeners ile ilgili hiçbir notasyon ve parametre kullanmadan istediğim
+        methodları veya classları çalıştırabildim. asagida yazdik-->
+
+
+
+  20- Listeners'a ozgu bir raporlama varsmis, bu rapor o xml sayfasinda kosturdugumuz testlerle ilgili oluyor.
+  xml sayfasi icinde sag tiklayip, "modifiy run configuration" kismina tiklyoruz, Listeners kismina tikla, arti isarertine tikla
+  reporter yaz, emailablereporter 'i sec. sonra xml dosyasini calistir, bir tane daha test-output dosyasi olusturuyor otomatik.
+  oraya raporu otomatik kaydediyor.

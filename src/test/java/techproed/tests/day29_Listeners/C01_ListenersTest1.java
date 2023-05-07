@@ -1,35 +1,21 @@
-package techproed.tests.day28_Listeners;
+package techproed.tests.day29_Listeners;
 
-import org.openqa.selenium.By;
 import org.openqa.selenium.NoSuchElementException;
 import org.testng.SkipException;
 import org.testng.annotations.Listeners;
 import org.testng.annotations.Test;
-import techproed.utilities.ConfigReader;
-import techproed.utilities.Driver;
 import techproed.utilities.ReusableMethods;
 
-import javax.swing.*;
+import static org.testng.AssertJUnit.assertEquals;
+import static org.testng.AssertJUnit.assertTrue;
 
-import static org.testng.AssertJUnit.*;
 
-@Listeners(techproed.utilities.Listeners.class)
-public class C01_ListenerTest1 {
-
-    /*
-LISTENERS; TestNG'de bir test'in durumunu ve sonucunu izleyen ve bu duruma yanit veren bir yapidir.
-Testlerin passed ve failed olma durumlarini baslangic ve bitiisni takip eder ve raporlayabilir.
-bunun icin testNg'den ITestlisteners arayuzunu(interface)kullaniriz.olusturdugumuz listerners
-class'ina ITlistener arauzundeki methodlari override etmek icin implements ederiz.
-
- */
-
-    /*
-    Bir class'ta listener kullanabilmek için class'dan önce @Listeners notasyonu eklememiz gerekir.
-    Notasyon içine parametre olarak Listeners class'ının yolunu belirtmemiz gerekir.
-     */
-
-    @Test
+//burda iki sey yaptik, 1= rety ile fail olan testleri tekrar calistirdik
+//2. class isminin uzerine @Listener yazarak, listner class'indan method kullanabilmek icin ,
+//failed cikan testlerin ekran goruntsunu aldik
+@Listeners(techproed.utilities.Listeners.class)//
+public class C01_ListenersTest1 {
+    @Test(retryAnalyzer = techproed.utilities.Listeners.class)
     public void test1() {
         System.out.println("PASSED");
         assertTrue(true);
@@ -37,7 +23,7 @@ class'ina ITlistener arauzundeki methodlari override etmek icin implements ederi
         //getName'den dolayi bu testlerden sonra adlairni da yaziyor. getName()'i Listener class'ina eklemistik
     }
 
-    @Test
+    @Test(retryAnalyzer = techproed.utilities.Listeners.class)
     public void test2() {
         System.out.println("FAILED");
         assertTrue(false);
@@ -45,7 +31,8 @@ class'ina ITlistener arauzundeki methodlari override etmek icin implements ederi
         ReusableMethods.tumSayfaResmi("test2");
     }
 
-    @Test//burda method icinde exception almak istiyoruz, yani bu testi "ignore" etmesini istiyoruz
+    @Test(retryAnalyzer = techproed.utilities.Listeners.class)
+    //burda method icinde exception almak istiyoruz, yani bu testi "ignore" etmesini istiyoruz
     public void test3() {
         System.out.println("SKIP");
         throw new SkipException("Method atlandi");
@@ -53,7 +40,7 @@ class'ina ITlistener arauzundeki methodlari override etmek icin implements ederi
 
     }
 
-    @Test
+    @Test(retryAnalyzer = techproed.utilities.Listeners.class)
     public void test4() {
         System.out.println("NO SUCH ELEMENT EXCEPTION");
         throw new NoSuchElementException("NOSUCHELEMENTEXCEPTION");

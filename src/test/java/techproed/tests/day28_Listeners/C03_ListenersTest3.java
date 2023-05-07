@@ -15,7 +15,7 @@ public class C03_ListenersTest3 {
     @Test notasyonundan sonra parametre olarak retryAnalyzer yazar ve oluşturmuş olduğumuz ListenersRetry class'ının
     yolunu belirtiriz.
     */
-    @Test(retryAnalyzer = techproed.utilities.ListenersRetry.class)
+    @Test(retryAnalyzer = techproed.utilities.Listeners.class)
     public void test1() {
         System.out.println("PASSED");
         assertTrue(true);
@@ -23,7 +23,7 @@ public class C03_ListenersTest3 {
         //getName'den dolayi bu testlerden sonra adlairni da yaziyor. getName()'i Listener class'ina eklemistik
     }
 
-    @Test(retryAnalyzer = techproed.utilities.ListenersRetry.class)
+    @Test(retryAnalyzer = techproed.utilities.Listeners.class)
     public void test2() {
         System.out.println("FAILED");
         assertTrue(false);
@@ -31,7 +31,7 @@ public class C03_ListenersTest3 {
         ReusableMethods.tumSayfaResmi("test2");
     }
 
-    @Test(retryAnalyzer = techproed.utilities.ListenersRetry.class)
+    @Test(retryAnalyzer = techproed.utilities.Listeners.class)
     //burda method icinde exception almak istiyoruz, yani bu testi "ignore" etmesini istiyoruz
     public void test3() {
         System.out.println("SKIP");
@@ -40,7 +40,7 @@ public class C03_ListenersTest3 {
 
     }
 
-    @Test(retryAnalyzer = techproed.utilities.ListenersRetry.class)
+    @Test(retryAnalyzer = techproed.utilities.Listeners.class)
     public void test4() {
         System.out.println("NO SUCH ELEMENT EXCEPTION");
         throw new NoSuchElementException("NOSUCHELEMENTEXCEPTION");
