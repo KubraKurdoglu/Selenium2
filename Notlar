@@ -113,3 +113,5 @@ onun methodlarina objesiz ulasamazsin
   xml sayfasi icinde sag tiklayip, "modifiy run configuration" kismina tiklyoruz, Listeners kismina tikla, arti isarertine tikla
   reporter yaz, emailablereporter 'i sec. sonra xml dosyasini calistir, bir tane daha test-output dosyasi olusturuyor otomatik.
   oraya raporu otomatik kaydediyor.
+
+  21-TestNG'de Reporter'i ile raporlama yapiyoruz
