@@ -27,6 +27,10 @@ public class HerokuPage {
     @FindBy(xpath = "//button[@id='onetrust-reject-all-handler']")
     public WebElement cerez;
 
+    // "There was a problem with your login."==>yazisinin locate'i
+    @FindBy(xpath = "//div[@class='alert alert-danger']")
+    public WebElement theWasaProblemYaziElementi;
+
 
 
 
