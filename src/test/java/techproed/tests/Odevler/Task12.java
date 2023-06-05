@@ -38,6 +38,8 @@ public class Task12 {
     @Test(dataProvider = "herokuapp")
     public void heroku(String email, String password) {
 
+
+
         //1.  https://id.heroku.com/login sayfasina gidin
         Driver.getDriver().get(ConfigReader.getProperty("herokuUrl"));
 
