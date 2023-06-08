@@ -1,4 +1,4 @@
-package gitgit.day26_ExcelDataProvider;
+package gitgit.deneme;
 
 import org.openqa.selenium.Keys;
 import org.testng.annotations.Test;
